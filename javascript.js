@@ -1,21 +1,33 @@
-const users = [
-  { user: "Martin Jones", age: 22, eyes: "brown" },
-  { user: "Jane Doe", age: 20, eyes: "blue" },
-  { user: "Martin Jones", age: 38, eyes: "lightgrey" },
-  { user: "Jeremy Crown", age: 80, eyes: "lightgreen" },
+/**
+ * Exercise One
+ */
+
+// const paintings = [
+//   { name: "Mona Lisa", width: 200, height: 200 },
+//   { name: "The scream", width: 400, height: 600 },
+//   { name: "The last  supper", width: 600, height: 700 },
+// ];
+
+// const messages = paintings.map(function (painting) {
+//   return `The ${painting.name} is ${painting.width} X ${painting.height}`;
+// });
+
+// console.log(messages);
+
+/**
+ * Exercise Tow
+ */
+
+const cars = [
+  { name: "Ford", price: 200 },
+  { name: "Nissan", price: 500 },
+  { name: "Toyota", price: 600 },
 ];
 
-const listOfUsers = users.map(function (user) {
-  return user.user;
+//  Ford is 40000 rupies
+
+const price = cars.map(function (car) {
+  return `${car.name} is ${car.price * 200} rupies`;
 });
 
-// console.log(listOfUsers);
-
-listOfUsers.forEach(function (name) {
-  const select = document.querySelector("select");
-
-  select.insertAdjacentHTML(
-    "afterbegin",
-    `<option value="${name}">${name}</option>`
-  );
-});
+console.log(price);
