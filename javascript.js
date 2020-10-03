@@ -1,8 +1,17 @@
-const names = ["Joao", "Lubota", "Vida", "Costa", "Beamer"];
-let template = "";
+var purchases = [
+  { quantity: 2, amount: 100 },
+  { quantity: 5, amount: 100 },
+  { quantity: 10, amount: 100 },
+];
 
-names.forEach(function (name) {
-  template += `<div>Hi my name is ${name}</div>`;
+var total = 0;
+
+// for (var i = 0; i < purchases.length; i++) {
+//   total += purchases[i].quantity * purchases[i].amount;
+// }
+
+purchases.forEach(function (item) {
+  total += item.quantity * item.amount;
 });
 
-document.body.insertAdjacentHTML("afterbegin", template);
+console.log(total);
