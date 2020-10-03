@@ -1,24 +1,21 @@
-/**
- * Using For Loop
- */
+const users = [
+  { user: "Martin Jones", age: 22, eyes: "brown" },
+  { user: "Jane Doe", age: 20, eyes: "blue" },
+  { user: "Martin Jones", age: 38, eyes: "lightgrey" },
+  { user: "Jeremy Crown", age: 80, eyes: "lightgreen" },
+];
 
-// var numbers = [1, 2, 3, 4, 5, 6];
-// var otherArray = [];
-
-// for (let i = 0; i < numbers.length; i++) {
-//   otherArray.push(numbers[i] * 10);
-// }
-
-// console.log(otherArray);
-
-/**
- * Using Map Loop
- */
-
-const numbers = [1, 2, 3, 4, 5, 6];
-
-const otherArray = numbers.map(function (number) {
-  return number * 10;
+const listOfUsers = users.map(function (user) {
+  return user.user;
 });
 
-console.log(otherArray);
+// console.log(listOfUsers);
+
+listOfUsers.forEach(function (name) {
+  const select = document.querySelector("select");
+
+  select.insertAdjacentHTML(
+    "afterbegin",
+    `<option value="${name}">${name}</option>`
+  );
+});
