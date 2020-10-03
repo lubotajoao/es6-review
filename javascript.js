@@ -1,7 +1,11 @@
-let type = "Cupcake";
-let flavor = "Apple";
-let price = 5;
+const artists = ["Calpton", "U2", "Bruno Mars", "Lamar"];
 
-type = "something else";
+// For Loop
+// for (var i = 0; i < artists.length; i++) {
+//   console.log(artists[i]);
+// }
 
-console.log(flavor);
+// Same result with forEach
+artists.forEach(function (artist) {
+  console.log(artist);
+});
