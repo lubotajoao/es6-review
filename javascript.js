@@ -1,17 +1,24 @@
-var purchases = [
-  { quantity: 2, amount: 100 },
-  { quantity: 5, amount: 100 },
-  { quantity: 10, amount: 100 },
-];
+/**
+ * Using For Loop
+ */
 
-var total = 0;
+// var numbers = [1, 2, 3, 4, 5, 6];
+// var otherArray = [];
 
-// for (var i = 0; i < purchases.length; i++) {
-//   total += purchases[i].quantity * purchases[i].amount;
+// for (let i = 0; i < numbers.length; i++) {
+//   otherArray.push(numbers[i] * 10);
 // }
 
-purchases.forEach(function (item) {
-  total += item.quantity * item.amount;
+// console.log(otherArray);
+
+/**
+ * Using Map Loop
+ */
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const otherArray = numbers.map(function (number) {
+  return number * 10;
 });
 
-console.log(total);
+console.log(otherArray);
