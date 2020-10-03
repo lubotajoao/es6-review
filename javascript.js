@@ -1,11 +1,8 @@
-const artists = ["Calpton", "U2", "Bruno Mars", "Lamar"];
+const names = ["Joao", "Lubota", "Vida", "Costa", "Beamer"];
+let template = "";
 
-// For Loop
-// for (var i = 0; i < artists.length; i++) {
-//   console.log(artists[i]);
-// }
-
-// Same result with forEach
-artists.forEach(function (artist) {
-  console.log(artist);
+names.forEach(function (name) {
+  template += `<div>Hi my name is ${name}</div>`;
 });
+
+document.body.insertAdjacentHTML("afterbegin", template);
