@@ -1,43 +1,55 @@
 /**
- * Find
+ * Every & Some
  */
 
-// Example: #01
-// const brands = [
-//   { name: "Apple", id: 1 },
-//   { name: "HP", id: 2 },
-//   { name: "Samsung", id: 3 },
-//   { name: "Samsung", id: 4 },
-// ];
+// Every
 
-// const result = brands.find(function (brand) {
-//   return brand.name === "Samsung";
-// });
-
-// console.log(result);
-
-// Example: #02
-const cars = [
-  { brand: "Ford", price: 500, available: 2, type: "Sport Car" },
-  { brand: "Nissa", price: 200, available: 5, type: "Wagon" },
-  { brand: "Chevy", price: 300, available: 4, type: "Sport Car" },
-  { brand: "Porshe", price: 100, available: 1, type: "Urban" },
+const students = [
+  { name: "Joao", grade: 4 },
+  { name: "Pedro", grade: 6 },
+  { name: "Manuel", grade: 2 },
 ];
 
-function getResoults() {
-  return cars.find(function (car) {
-    return car.price < price && car.available > 0 && car.type === type;
-  });
-}
+// let allStudentsPassedTheCourse = false;
 
-document.querySelector(".search").addEventListener("click", function () {
-  let price = parseIn(document.querySelector("#price").value);
-  let type = document.querySelector("#type").value;
-  let results = getResoults(price, type);
+// for (let i = 0; i < students.length; i++) {
+//   let student = students[i];
 
-  if (results) {
-    console.log(`Found ${result.brand} fir $ ${results.price}`);
-  } else {
-    console.log(`Sorry, no car for you`);
-  }
+//   if (student.grade < 6) {
+//     allStudentsPassedTheCourse = false;
+//     break;
+//   } else {
+//     allStudentsPassedTheCourse = true;
+//   }
+// }
+
+// console.log(allStudentsPassedTheCourse);
+
+// let allStudentsPassedTheCourse = students.every(function (student) {
+//   return student.grade >= 6;
+// });
+
+// console.log(allStudentsPassedTheCourse);
+
+// Some
+
+// let allStudentsPassedTheCourse = true;
+
+// for (let i = 0; i < students.length; i++) {
+//   let student = students[i];
+
+//   if (student.grade >= 6) {
+//     allStudentsPassedTheCourse = true;
+//     break;
+//   } else {
+//     allStudentsPassedTheCourse = false;
+//   }
+// }
+
+// console.log(allStudentsPassedTheCourse);
+
+let allStudentsPassedTheCourse = students.some(function (student) {
+  return student.grade >= 6;
 });
+
+console.log(allStudentsPassedTheCourse);
